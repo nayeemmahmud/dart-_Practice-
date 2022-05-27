@@ -6,6 +6,8 @@ import 'dart:developer' as devtools show log;
 void main() {
   runApp(const MyApp());
 
+  print('nayeem');
+
   var d = pera(2, 10);
   print(d);
 
