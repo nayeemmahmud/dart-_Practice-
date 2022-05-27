@@ -47,13 +47,16 @@ void main() {
   print(newStudents2.name);
   print(newStudents2.rollNumber);
 
-  Cycle objCycle = Cycle(100);
+  Cycle objCycle = Cycle();
+  Cycle objCycle2 = Cycle();
+
+  Cycle.myNamedConstructor('Red');
 }
 
 class Bike {
   String? color;
 
-  Bike(int price) {
+  Bike() {
     print('This is bike constructor');
   }
 }
@@ -61,8 +64,12 @@ class Bike {
 class Cycle extends Bike {
   int? price;
 
-  Cycle(int? price) : super(100) {
+  Cycle() {
     print('this is cycle constructor');
+  }
+
+  Cycle.myNamedConstructor(String color) {
+    print('named Constructor Of Cycle');
   }
 }
 
