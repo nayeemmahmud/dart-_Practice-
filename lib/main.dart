@@ -6,8 +6,6 @@ import 'dart:developer' as devtools show log;
 void main() {
   runApp(const MyApp());
 
-  print('nayeem');
-
   var d = pera(2, 10);
   print(d);
 
@@ -48,6 +46,24 @@ void main() {
 
   print(newStudents2.name);
   print(newStudents2.rollNumber);
+
+  Cycle objCycle = Cycle(100);
+}
+
+class Bike {
+  String? color;
+
+  Bike(int price) {
+    print('This is bike constructor');
+  }
+}
+
+class Cycle extends Bike {
+  int? price;
+
+  Cycle(int? price) : super(100) {
+    print('this is cycle constructor');
+  }
 }
 
 int pera(int a, int b) {
@@ -109,7 +125,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Nayeems home page'),
     );
   }
 }
