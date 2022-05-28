@@ -51,6 +51,22 @@ void main() {
   Cycle objCycle2 = Cycle();
 
   Cycle.myNamedConstructor('Red');
+
+  Rectangle rect = Rectangle();
+  rect.draw();
+}
+
+//////// abstract example
+abstract class Shape {
+  void draw();
+}
+
+class Rectangle extends Shape {
+  @override
+  void draw() {
+    // TODO: implement drawp
+    print('drawing');
+  }
 }
 
 class Bike {
