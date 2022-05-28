@@ -60,9 +60,29 @@ void main() {
   car1.move();
   car1.stop();
   car1.run();
+
+  // fixed and growable list
+  var nameList = List.filled(5, 0, growable: false);
+  print(nameList);
+
+  // growable list
+
+  var nameList2 = List.filled(0, 0, growable: true);
+  nameList2.add(2);
+  nameList2.add(4);
+  nameList2.add(6);
+  nameList2.add(8);
+  nameList2.add(10);
+  nameList2.add(11);
+  nameList2.add(18);
+
+  nameList2.remove(4);
+  nameList2.removeAt(3);
+
+  print(nameList2);
 }
 
-////// interface class 32
+////// interface class 32 - interface is used by using impliments
 class Motor {
   run() {
     print('Motor is running');
