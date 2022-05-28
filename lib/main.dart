@@ -93,6 +93,47 @@ void main() {
   nameList3.add(18);
 
   print(nameList3);
+
+  // extension class 41
+
+  print(10.toWord);
+
+  // class 41 date time example
+  var date = DateTime.now();
+  print(date.myCustomdate);
+}
+
+//  extension date time class 41
+
+extension on DateTime {
+  get myCustomdate {
+    return "${this.day}/${this.month}/${this.year}";
+  }
+}
+
+//  extension class 41
+extension on int {
+  get toWord {
+    switch (this) {
+      case 1:
+        return 'One';
+      case 2:
+        return 'Two';
+      case 3:
+        return 'Three';
+      case 4:
+        return 'Four';
+      case 5:
+        return 'Five';
+      case 6:
+        return 'Six';
+      case 7:
+        return 'Seven';
+
+      default:
+        return 'Please enter the valid number';
+    }
+  }
 }
 
 ////// interface class 32 - interface is used by using impliments
