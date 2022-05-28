@@ -54,6 +54,47 @@ void main() {
 
   Rectangle rect = Rectangle();
   rect.draw();
+
+  /// interface class 32
+  Car car1 = Car();
+  car1.move();
+  car1.stop();
+  car1.run();
+}
+
+////// interface class 32
+class Motor {
+  run() {
+    print('Motor is running');
+  }
+}
+
+class Vehicle {
+  move() {
+    print('vehicle is moving');
+  }
+
+  stop() {
+    print('vehicle has stop');
+  }
+}
+
+class Car implements Vehicle, Motor {
+  @override
+  move() {
+    print('car is moving');
+  }
+
+  @override
+  stop() {
+    print('car has stop');
+  }
+
+  @override
+  run() {
+    // TODO: implement run
+    print('this motor is running');
+  }
 }
 
 //////// abstract example
