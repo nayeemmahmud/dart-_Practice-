@@ -62,7 +62,7 @@ void main() {
   car1.run();
 
   // fixed and growable list
-  var nameList = List.filled(5, 0, growable: false);
+  var nameList = List<int>.filled(5, 0, growable: false);
   print(nameList);
 
   // growable list
@@ -80,6 +80,19 @@ void main() {
   nameList2.removeAt(3);
 
   print(nameList2);
+
+  // set -- it's almost same as list but st ignores duplicates
+
+  Set<int> nameList3 = Set();
+  nameList3.add(2);
+  nameList3.add(4);
+  nameList3.add(4);
+  nameList3.add(8);
+  nameList3.add(10);
+  nameList3.add(11);
+  nameList3.add(18);
+
+  print(nameList3);
 }
 
 ////// interface class 32 - interface is used by using impliments
